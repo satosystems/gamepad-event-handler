@@ -13,6 +13,7 @@ description: Please see the README on GitHub at <https://github.com/satosystems/
 
 dependencies:
   - base >= 4.7 && < 5
+  - sdl2
 
 ghc-options:
   - -Wall
