@@ -1,0 +1,49 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           gamepad-event-handler
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/satosystems/gamepad-event-handler#readme>
+homepage:       https://github.com/satosystems/gamepad-event-handler#readme
+bug-reports:    https://github.com/satosystems/gamepad-event-handler/issues
+author:         Satoshi Ogata
+maintainer:     satosystems@gmail.com
+copyright:      (c) 2022 Satoshi Ogata
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/satosystems/gamepad-event-handler
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_gamepad_event_handler
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , sdl2
+  default-language: Haskell2010
+
+executable gamepad-event-handler
+  main-is: Main.hs
+  other-modules:
+      Paths_gamepad_event_handler
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , gamepad-event-handler
+    , sdl2
+  default-language: Haskell2010
