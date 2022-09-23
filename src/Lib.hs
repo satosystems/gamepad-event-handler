@@ -79,4 +79,4 @@ appLoop renderer = do
   rendererDrawColor renderer $= V4 0 0 255 255
   clear renderer
   present renderer
-  unless qPressed (appLoop renderer)
+  unless qPressed $ appLoop renderer
